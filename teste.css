@@ -1,0 +1,142 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: "Arial", sans-serif; 
+}
+
+.header{
+	height: 100px;
+	background-color: #290472;
+	padding: 0 50px;
+	color: #fff;
+}
+
+.logo{
+	line-height: 100px;
+	float: left;
+	text-transform: uppercase;
+}
+
+.menu{
+	float: right;
+	line-height: 100px;
+	margin: 0 10px; /*CUIDADO-654*/
+}
+
+.menu a{
+	align-items: center;
+	color: #fff;
+	text-transform: uppercase;
+	text-decoration: none;
+	padding: 0 10px;
+	transition: 0.4s;
+}
+
+.show-menu-btn,.hide-menu-btn{
+	transition: 0.4s;
+	font-size: 30px;
+	cursor: pointer;
+	display: none;
+}
+
+.show-menu-btn{
+	float: right;
+}
+
+.show-menu-btn i{
+	line-height: 100px;
+}
+
+.menu a:hover
+.show-menu-btn:hover,
+.hide-menu-btn:hover{
+    color: #3498db;
+}
+
+#chk{
+	position: absolute;
+	visibility: hidden;
+	z-index: 1111;
+}
+
+.caixa{
+	padding: 0 20px;
+}
+
+.caixa img{
+	width: 100%;
+	max-width: 700px;
+	margin: 20px 0;
+}
+
+@media screen and (max-width: 800px){
+	.show-menu-btn, .hide-menu-btn{
+		display: block;
+	}
+
+	.menu{
+	    position: fixed;
+	    width: 100px;
+	    height: vh;
+	    background-color: #333;
+	    right: -100%;
+	    top: 0;
+	    text-align: center;
+	    padding: 80px 0;
+	    line-height: normal;
+	    transition: 0.7s; 
+	}
+
+	.menu a{
+		display: block;
+		padding: 20px;
+	}
+
+	.hide-menu-btn{
+		position: absolute;
+		top: 40px;
+		right: 40px;
+	}
+
+	#chk:checked ~ .menu{
+		right: 0;
+	}
+}/*Aula 63*/
+
+
+.maior{
+	max-width: 1200px;
+	margin: auto;
+	overflow: hidden;
+	padding: 0 20px;
+}
+
+.grade{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.coluna{
+	flex: 33.33%;
+	max-width: 33.33%;
+	box-sizing: border-box;
+	padding: 15px;
+}
+
+
+
+.modelo img{
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+}
+
+.nome{
+	color: red;
+	font-size: 20px;
+	text-transform: uppercase;
+	margin: 20px 0;
+}
+
+
